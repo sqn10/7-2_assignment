@@ -4,21 +4,21 @@
     {
         static void Main(string[] args)
         {
-            //Assignment1();
+            Assignment1();
 
-            //Console.WriteLine();
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
-            //Assignment2();
+            Assignment2();
 
-            //Console.WriteLine();
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
             Assignment3();
         }
         public static void Assignment1()
         {
-           Console.WriteLine("BLAST OFF!!!");
+           Console.WriteLine("HERE WE GO!!!");
 
            Console.WriteLine("T minus");
             for (int i = 10; i >= 0; i -= 1)
@@ -34,6 +34,11 @@
         public static void Assignment2()
         {
             int y = 0;
+
+            Console.WriteLine("Press ENTER.");
+            Console.ReadLine();
+            Console.Clear();
+
             Console.WriteLine("\t X" + "\t Y");
 
             for (int x = -10; x <= 10; x = x + 2)
@@ -44,13 +49,24 @@
         }
         public static void Assignment3()
         {
-            Console.WriteLine("Please enter your name: ");
+            int countTo = 5;
+
+            Console.WriteLine("Press ENTER.");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("Please enter your name: ");
             string input = Console.ReadLine();
             Console.WriteLine();
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= countTo * 2; i++)
             {
-                if (input != "aldworth".ToLower())
+                /* Checks if user's input is or isn't Aldworth. If it is, make sure the counter stays less than or equal to the value of countTo.
+                 * If I had kept my numbers hard coded, it would've made my program more inefficient, especially if you wanted to have something like
+                 * Aldworth print 7 times and regular users 14, etc..
+                 */
+
+                if (input.ToLower() != "aldworth" || input.ToLower() == "aldworth" && i <= countTo)
                 {
                     Console.WriteLine(i + ". " + input);
                 }
